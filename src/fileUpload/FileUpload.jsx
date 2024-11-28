@@ -37,15 +37,16 @@ function FileUpload() {
         }
     }
   return (
-    <div className='flex  flex-col gap-2 h-full py-[50px] w-full bg-orange-900 justify-center items-center'>
+    <div className='flex  flex-col gap-2 h-full py-[50px] w-full  justify-center items-center'>
         <div className='flex flex-col gap-2'>
             <a href="/calendarUI">
-                <button className='p-[10px] bg-black text-white'>Calendar </button>
+                <button className='p-[10px] bg-black text-white'>Calendar and Pomodor Timer </button>
             </a>
             <a href="/event">
                 <button className='p-[10px] bg-black text-white'>Create New Event  </button>
             </a>
         </div>
+        <p className='text-[15px] font-bold mt-[30px]'>FILE UPLOAD TESTING</p>
         <input onChange={fileUpload} name ="fileName" type="file"/>
         <button className='p-[10px] bg-black text-white' onClick={uploadFile}>Upload file</button>
         {preview && (
