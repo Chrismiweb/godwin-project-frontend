@@ -47,6 +47,7 @@ function FileUpload() {
             </a>
         </div>
         <p className='text-[15px] font-bold mt-[30px]'>FILE UPLOAD TESTING</p>
+        <p className='text-[12px] '>Choose a file before uploading</p>
         <input onChange={fileUpload} name ="fileName" type="file"/>
         <button className='p-[10px] bg-black text-white' onClick={uploadFile}>Upload file</button>
         {preview && (
