@@ -38,9 +38,12 @@ function FileUpload() {
     }
   return (
     <div className='flex  flex-col gap-2 h-full py-[50px] w-full bg-orange-900 justify-center items-center'>
-        <div>
+        <div className='flex flex-col gap-2'>
             <a href="/calendarUI">
                 <button className='p-[10px] bg-black text-white'>Calendar </button>
+            </a>
+            <a href="/event">
+                <button className='p-[10px] bg-black text-white'>Create New Event  </button>
             </a>
         </div>
         <input onChange={fileUpload} name ="fileName" type="file"/>
