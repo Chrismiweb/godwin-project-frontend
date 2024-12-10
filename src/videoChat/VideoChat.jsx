@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import SimplePeer from "simple-peer";
 import { useNavigate, useParams } from "react-router-dom";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://godwin-project-backend.onrender.com");
 
 function VideoChat() {
   const [stream, setStream] = useState(null);
@@ -28,7 +28,7 @@ function VideoChat() {
   }, []);
 
   const createRoom = async () => {
-    const response = await fetch("http://localhost:5000/create-room");
+    const response = await fetch("https://godwin-project-backend.onrender.com/create-room");
     const data = await response.json();
     setRoomId(data.roomId);
     const generatedLink = `${window.location.origin}/videoChat/join/${data.roomId}`;
